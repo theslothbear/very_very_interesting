@@ -12,7 +12,7 @@ void output(H child){
     cout << "Имя: " << child.nameM << "; Год рождения: " << child.yearM << "; Количество игрушек: " << child.numM << " Игрушки: ";
   for(int i = 0; i < child.numM; i++){
     if(i) cout << ", ";
-    cout << child.toys[i];
+    cout << child.toysM[i];
   }
   cout << endl;
 }
@@ -28,11 +28,11 @@ int main()
         toys = "";
         for(int j=0; j<num; j++){
             getline(f1, toy);
-            M.toys[j] = toy;
+            M[i].toysM[j] = toy;
         }
-        M.nameM = name;
-        M.yearM = year;
-        M.numM = num;
+        M[i].nameM = name;
+        M[i].yearM = year;
+        M[i].numM = num;
    }
    for(H child: M){
        output(child);
