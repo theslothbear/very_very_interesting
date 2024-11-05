@@ -6,6 +6,7 @@ count, max_count = 0, 0
 for i in range(len(s)):
 	if s[i] == 'C':
 		count+=1
+		max_count = max(count, max_count)
 	else:
 		max_count = max(count, max_count)
 		count = 0
@@ -19,6 +20,7 @@ count, max_count = 0, 0
 for i in range(len(s)):
 	if s[i] in ['A', 'B', 'C']:
 		count+=1
+		max_count = max(count, max_count)
 	else:
 		max_count = max(count, max_count)
 		count = 0
@@ -33,6 +35,7 @@ count, max_count = 0, 0
 for i in range(len(s)):
 	if s[i] == s2[count]:
 		count+=1
+		max_count = max(count, max_count)
 	else:
 		max_count = max(count, max_count)
 		count = 0
