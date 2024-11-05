@@ -56,3 +56,14 @@ for i in range(len(s)-2):
 		count+=1
 print(count)
 
+'''
+В текстовом файле k7c-6.txt находится цепочка из символов латинского алфавита A, B, C, D, E, F. Найдите количество цепочек длины 3, в которых символы не совпадают.
+
+'''
+s = open('k7c-2.txt', 'r').readline()
+count = 0
+for i in range(len(s)-2):
+	c = s[i:i+3]
+	if c[0] != c[1] != c[2]:
+		count+=1
+print(count)
